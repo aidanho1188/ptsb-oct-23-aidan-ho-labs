@@ -19,12 +19,10 @@ To get started with a lab, follow these steps:
 
 1. Clone this repository to your local machine.
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/aidanho1188/ptsb-oct-23-aidan-ho-labs.git
     ```
 
-2. Navigate to the specific lab folder.
+2. Navigate to the specific lab folder and run the lab from there.
     ```bash
     cd Lab_X
     ```
-
-3. [Include any specific setup instructions or prerequisites for each lab]
