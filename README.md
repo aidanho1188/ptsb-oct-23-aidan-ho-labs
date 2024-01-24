@@ -2,16 +2,16 @@
 
 Welcome to the repository! This repository contains the labs for PTSB-OCT-23.
 
-## Folder Structure
+## Labs links
 
+- [Basic Auth](./basic-auth/)
+- [Constructing a Library](./constructing-a-library/)
+- [CRUD Server](./crud-server/)
+- [Fetching Data](./fetching-data/)
 - [Login Form](./login-form/)
-  - Deployment link
 - [Poke blog](./poke-blog/)
-  - Deployment link
 - [Reading Form](./reading-forms)
-  - Deployment link
 - [Robot Warehouse](./robot-warehouse/)
-  - Deployment link
 
 ## Getting Started
 
