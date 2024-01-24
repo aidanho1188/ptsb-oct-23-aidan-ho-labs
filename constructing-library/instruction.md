@@ -25,16 +25,16 @@ Your work will result in:
 
 ## Creating And Scaffolding The Program
 
-- [ ]  Create a new directory `constructing-library` and initialize it with NPM.
-- [ ]  Install `mongodb` in the new directory.
-- [ ]  Create two files, `Library.js` and `client.js`.
+- [x]  Create a new directory `constructing-library` and initialize it with NPM.
+- [x]  Install `mongodb` in the new directory.
+- [x]  Create two files, `Library.js` and `client.js`.
 
 ## Construct The `Library` Class
 
-- [ ]  Import `MongoClient` and `ObjectId` from "mongodb" in `Library.js`
-- [ ]  Set up the `Library` class and constructor. The constructor will take the following parameters: `dbUrl`, `dbName`, and `collName`.
-- [ ]  Bind the parameters to the constructor with the `this` keyword.
-- [ ]  You will also bind the variable `dbClient` to `this` and initialize it as empty.
+- [x]  Import `MongoClient` and `ObjectId` from "mongodb" in `Library.js`
+- [x]  Set up the `Library` class and constructor. The constructor will take the following parameters: `dbUrl`, `dbName`, and `collName`.
+- [x]  Bind the parameters to the constructor with the `this` keyword.
+- [x]  You will also bind the variable `dbClient` to `this` and initialize it as empty.
 
 class Library {
 
@@ -56,11 +56,11 @@ class Library {
 
 ## Create The Async `client` Method
 
-- [ ]  Within the `Library` class, create a new async method `client`.
-- [ ]  Insert a console log to let the user know they are connecting to `dbUrl`.
-- [ ]  Pass in `this.dbUrl` to the `connect` method on `MongoClient` and reassign the value to `this.dbClient`.
-- [ ]  Insert a console log to inform the user their connection was successful.
-- [ ]  Return `this.dbClient`
+- [x]  Within the `Library` class, create a new async method `client`.
+- [x]  Insert a console log to let the user know they are connecting to `dbUrl`.
+- [x]  Pass in `this.dbUrl` to the `connect` method on `MongoClient` and reassign the value to `this.dbClient`.
+- [x]  Insert a console log to inform the user their connection was successful.
+- [x]  Return `this.dbClient`
 
 ```javascript
     async client() {
@@ -78,9 +78,9 @@ class Library {
 
 ## Create The Async `test` Method
 
-- [ ]  Beneath the async `client` method, create a new async method called `test`.
-- [ ]  Await `this.client()` and assign it to the client variable.
-- [ ]  Use the `close` method on client.
+- [x]  Beneath the async `client` method, create a new async method called `test`.
+- [x]  Await `this.client()` and assign it to the client variable.
+- [x]  Use the `close` method on client.
 
 async test() {
 
