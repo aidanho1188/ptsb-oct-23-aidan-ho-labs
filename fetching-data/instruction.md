@@ -1,7 +1,7 @@
 # Lab: Fetching Data #lab
 
 ## Due date: 1/22/24
-We will be setting up a DOM-based front-end application that will allow the user to interact with a database, with a server acting as the interface between the two. We'll be building this off of the code we wrote for our Data Store lab so that we can hook into the functionality of the `DataStore` class.
+We will be setting up a DOM-based front-end application that will allow the user to interact with a database, with a server acting as the interface between the two. We'll be building this off of the code we wrote for our Data Store lab(constructing a library lab) so that we can hook into the functionality of the `DataStore` class.
 
 ## Setting up your Directory
 
