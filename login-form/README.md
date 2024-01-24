@@ -1,3 +1,5 @@
+# Project deployment link [here](https://aidanho1188.github.io/Login-Form/)
+
 ## Login, Validation, and Password Reveal
 
 Your product owner has tasked you to create a new login for Upright Education. You will need to use your HTML, CSS, and Javascript skills to develop this feature. It will touch on previously learned concepts and new ones. Use the tools at your disposal via searching online!

@@ -14,7 +14,7 @@
     <main class="wrapper">
       <div class="login">
         <img src="./resources/upright-logo.png" alt="upright-logo">
-        <form action="" method="post">
+        <form>
           <div class="email-form">
             <label for="email">EMAIL</label>
             <input type="text" name="email" id="email" placeholder="you@email.com" required>
@@ -39,6 +39,13 @@
       const passwordInput = document.getElementById('password');
       const eyeOpen = document.querySelector('.toggle-password #eye-open');
       const eyeClosed = document.querySelector('.toggle-password #eye-close');
+      const loginBtn = document.getElementById("login");
+
+      const fakeLogin = {
+        johnsmith: "johnpassword",
+        caseyfict: "caseypassword",
+        jessdaring: "jesspassword",
+      }
 
       togglePassword.addEventListener('click', () => {
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -46,6 +53,47 @@
         eyeOpen.style.display = type === 'password' ? 'inline' : 'none';
         eyeClosed.style.display = type === 'password' ? 'none' : 'inline';
       });
+
+      loginBtn.addEventListener('click', (evt) => {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        evt.preventDefault();
+        
+        if(email && password ){
+          if (fakeLogin[email] === password) {
+            alert("Login successful!");
+            // Extra credit query string
+            // const successUrl = `/success?email=${email}&password=${password}`;
+            // window.location = successUrl;
+          } else {
+            alert("It looks like your email or password is incorrect. Please try again."); // We don't want the user to know which information is incorrect for the sake of security
+          }
+        } else {
+          alert("Please enter your information");
+        }
+      })
+
+      // Extra credit:
+      // Fetching
+      // async function getData(successUrl="", data ={}) {
+      //   try {
+            // query string fetching
+            // const res = await fetch(successUrl);
+            // const data = await resp.json();
+            // console.log(data);
+
+            // fetching using body
+            // const res = await fetch(successUrl, {
+            //   method: 'GET',
+            //   headers: {
+            //   "Content-Type": "application/json",
+            //   },
+            //   body: JSON.stringify(data),
+            //  });
+      //   } catch (error) {
+      //       console.log(error);
+      //   }
+      // }
     </script>
 </body>
 
