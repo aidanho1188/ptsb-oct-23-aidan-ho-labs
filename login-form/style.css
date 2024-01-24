@@ -1,0 +1,90 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
+  padding: 43px 28px;
+  border: 1px solid #d1d1d1;
+  color: #ff5321;
+}
+
+.login img {
+  width: 165px;
+  height: auto;
+  border-bottom: 1px solid #d1d1d1;
+  padding: inherit;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.email-form,
+.password-form {
+  padding: 10px;
+  position: relative;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  border-color: gray;
+}
+
+input:focus {
+  border-color: #ff5321;
+}
+
+#login {
+  align-self: center;
+  background-color: #ff5321;
+  color: #fff;
+  padding: 10px 20px;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#login:hover {
+  background-color: #f15124;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-password {
+  background-color: transparent;
+  position: absolute;
+  right: 7px;
+  padding: 10px 5px;
+  top: 62%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-password img {
+  width: 19px;
+}
+
+.toggle-password #eye-open {
+  display: inline;
+}
+
+.toggle-password #eye-close {
+  display: none;
+}

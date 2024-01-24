@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Login - Upright Education</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="./resources/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="page">
+    <main class="wrapper">
+      <div class="login">
+        <img src="./resources/upright-logo.png" alt="upright-logo">
+        <form action="" method="post">
+          <div class="email-form">
+            <label for="email">EMAIL</label>
+            <input type="text" name="email" id="email" placeholder="you@email.com" required>
+          </div>
+          <div class="password-form">
+            <label for="password">PASSWORD</label>
+            <div class="password-container">
+              <input type="password" name="password" id="password" placeholder="password123" required>
+              <button type="button" id="toggle-password" class="toggle-password">
+                <img src="./resources/eye-open.svg" id="eye-open" alt="eye-open">
+                <img src="./resources/eye-closed.svg" id="eye-close" alt="eye-close">
+              </button>
+            </div>
+          </div>
+          <button name="login" id="login" value="login">Login</button>
+        </form>
+      </div>
+    </main>
+  </div>
+    <script>
+      const togglePassword = document.getElementById('toggle-password');
+      const passwordInput = document.getElementById('password');
+      const eyeOpen = document.querySelector('.toggle-password #eye-open');
+      const eyeClosed = document.querySelector('.toggle-password #eye-close');
+
+      togglePassword.addEventListener('click', () => {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        eyeOpen.style.display = type === 'password' ? 'inline' : 'none';
+        eyeClosed.style.display = type === 'password' ? 'none' : 'inline';
+      });
+    </script>
+</body>
+
+</html>
