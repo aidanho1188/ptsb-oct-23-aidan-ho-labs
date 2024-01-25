@@ -36,9 +36,9 @@ Your work will result in:
 - [x]  Bind the parameters to the constructor with the `this` keyword.
 - [x]  You will also bind the variable `dbClient` to `this` and initialize it as empty.
 
+```javascript
 class Library {
 
-```javascript
     constructor(dbUrl, dbName, collName) {
 
       this.dbUrl = dbUrl;
@@ -82,9 +82,9 @@ class Library {
 - [x]  Await `this.client()` and assign it to the client variable.
 - [x]  Use the `close` method on client.
 
+```javascript
 async test() {
 
-```javascript
         const client = await this.client()
 
         client.close()
@@ -94,10 +94,10 @@ async test() {
 
 ## Set Up And Test Your Connection
 
-- [ ]  In `client.js`, import `Library`.
-- [ ]  Create a new variable `collection` and instantiate a new `Library`, passing in three arguments: the local connection string, "library", and "books".
-- [ ]  Invoke the `test` method on `collection`.
-- [ ]  If your connection is successful, you should see the console logs created in the `client` method in your `Library` constructor.
+- [x]  In `client.js`, import `Library`.
+- [x]  Create a new variable `collection` and instantiate a new `Library`, passing in three arguments: the local connection string, "library", and "books".
+- [x]  Invoke the `test` method on `collection`.
+- [x]  If your connection is successful, you should see the console logs created in the `client` method in your `Library` constructor.
 
 Connecting to mongodb://127.0.0.1:27017...
 
@@ -105,11 +105,11 @@ Connected to database.
 
 ## Create The Async `collection` Method
 
-- [ ]  Beneath the async `test` method, create a new async method called `collection`.
-- [ ]  Await `this.client()` and assign it to the client variable.
-- [ ]  Pass in `this.dbName` to the `db` method on `client` and assign it to a variable named `db`.
-- [ ]  Pass in `this.collName` to the `collection` method on `db` and assign it to a variable named `collection`.
-- [ ]  Return `collection`
+- [x]  Beneath the async `test` method, create a new async method called `collection`.
+- [x]  Await `this.client()` and assign it to the client variable.
+- [x]  Pass in `this.dbName` to the `db` method on `client` and assign it to a variable named `db`.
+- [x]  Pass in `this.collName` to the `collection` method on `db` and assign it to a variable named `collection`.
+- [x]  Return `collection`
 
 ```javascript
    async collection() {
@@ -126,8 +126,8 @@ Connected to database.
 ```
 ## Populate the Collection
 
-- [ ]  In Compass, create at least three documents to represent the books in your `books` collection.
-- [ ]  These books should have the following key value pairs: `title`, `author`, and `copies`.
+- [x]  In Compass, create at least three documents to represent the books in your `books` collection.
+- [x]  These books should have the following key value pairs: `title`, `author`, and `copies`.
 
 ```javascript
 {
@@ -145,61 +145,61 @@ Connected to database.
 
 ## Create The Async `allBooks` Method
 
-- [ ]  Create the async `allBooks` method on `Library`.
-- [ ]  Await `this.collection()` and assign it to a `collection` variable.
-- [ ]  Return the result of the `find` method on `collection`, passing in an empty object as its argument.
-- [ ]  In `client.js`, await and test the result of this method and assign it to the variable `allBooks`.
-- [ ]  On `allBooks`, utilize the `forEach` method to print each book to the console.
-- [ ]  _This method should display all documents in the `book` collection._
+- [x]  Create the async `allBooks` method on `Library`.
+- [x]  Await `this.collection()` and assign it to a `collection` variable.
+- [x]  Return the result of the `find` method on `collection`, passing in an empty object as its argument.
+- [x]  In `client.js`, await and test the result of this method and assign it to the variable `allBooks`.
+- [x]  On `allBooks`, utilize the `forEach` method to print each book to the console.
+- [x]  _This method should display all documents in the `book` collection._
 
 ## Create The Async `findOneBook` Method
 
-- [ ]  Create the async `findOneBook` method on `Library` with the parameter of `id`.
-- [ ]  Pass in `id` to `ObjectId` and assign it to the variable `docId`.
-- [ ]  Await `this.collection()` and assign it to a `collection` variable.
-- [ ]  Return the result of the find method on collection, passing in `docId` as the argument.
-- [ ]  In `client.js`, await the result of the method passing in the `_id` string from a document in the collection and assign it to the variable `findOneBook`.
-- [ ]  On `findOneBook`, utilize the `forEach` method to print the book to the console.
-- [ ]  _This method should display one book whose _id matches the value passed in_.
+- [x]  Create the async `findOneBook` method on `Library` with the parameter of `id`.
+- [x]  Pass in `id` to `ObjectId` and assign it to the variable `docId`.
+- [x]  Await `this.collection()` and assign it to a `collection` variable.
+- [x]  Return the result of the find method on collection, passing in `docId` as the argument.
+- [x]  In `client.js`, await the result of the method passing in the `_id` string from a document in the collection and assign it to the variable `findOneBook`.
+- [x]  On `findOneBook`, utilize the `forEach` method to print the book to the console.
+- [x] _This method should display one book whose `_id`matches the value passed in_.
 
 ## Create The Async `findManyBooks` Method
 
-- [ ]  Create the async `findBooks` method on `Library` with the parameter of `query`.
-- [ ]  Await `this.collection()` and assign it to a `collection` variable.
-- [ ]  Return the result of `find` method on `collection`, passing in `query` as its argument.
-- [ ]  In `client.js`, await and test the result of the method, referring to the [MongoDB documentation](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/) for the query syntax to pass as the argument. The key value pairs on the documents are valid querys. Assign the result to the `findManyBooks` variable.
-- [ ]  On `findManyBooks`, utilize the `forEach` method to print each book to the console.
-- [ ]  _This method should display all documents in the `books` collection that match the query._
+- [x]  Create the async `findBooks` method on `Library` with the parameter of `query`.
+- [x]  Await `this.collection()` and assign it to a `collection` variable.
+- [x]  Return the result of `find` method on `collection`, passing in `query` as its argument.
+- [x]  In `client.js`, await and test the result of the method, referring to the [MongoDB documentation](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/) for the query syntax to pass as the argument. The key value pairs on the documents are valid querys. Assign the result to the `findManyBooks` variable.
+- [x]  On `findManyBooks`, utilize the `forEach` method to print each book to the console.
+- [x]  _This method should display all documents in the `books` collection that match the query._
 
 ## Create The Async `addBook` Method
 
-- [ ]  Create the async `addBook` method on `Library` with a parameter of `info`.
-- [ ]  Await `this.collection()` and assign it to a `collection` variable.
-- [ ]  Pass in `info` to the `insertOne` method on `collection` and await the result.
-- [ ]  Console log a message to the user informing them their book was successfully added.
-- [ ]  Test the result of this method in `client.js`, referring to the [MongoDB documentation](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertOne/) for the format syntax to pass as the argument. The new book should have the same key value pairs as the original books.
-- [ ]  _This method should insert a new document 'book' into the `books` collection._
+- [x]  Create the async `addBook` method on `Library` with a parameter of `info`.
+- [x]  Await `this.collection()` and assign it to a `collection` variable.
+- [x]  Pass in `info` to the `insertOne` method on `collection` and await the result.
+- [x]  Console log a message to the user informing them their book was successfully added.
+- [x]  Test the result of this method in `client.js`, referring to the [MongoDB documentation](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertOne/) for the format syntax to pass as the argument. The new book should have the same key value pairs as the original books.
+- [x]  _This method should insert a new document 'book' into the `books` collection._
 
 ## Create The Async `changeBook` Method
 
-- [ ]  Create the async `changeBook` method on `Library` with two parameters, id and newInfo.
-- [ ]  Pass in id to `ObjectId` and assign it to the `mongoId` variable.
-- [ ]  Create a new object that utilizes the `$set` update operator as its key and newInfo as its value. Assign it to the `infoObj` variable. Refer to the [MongoDB documentation](https://www.mongodb.com/docs/manual/reference/operator/update/set/) if needed.
-- [ ]  Await `this.collection()` and assign it to a `collection` variable.
-- [ ]  Await the result of the `updateOne` method on `collection`. The first argument will set the `_id` key to `mongoId` as its value within an object, the second argument will be `infoObj`.
-- [ ]  Console log a message to the user informing them their book was successfully updated.
-- [ ]  Await and test the result of this method in `client.js`. The first argument should be the id string of the document you want to change, and the second argument should be an object containing the key you want to change with its new value.
-- [ ]  _This method should update the targeted properties on the targeted document._
+- [x]  Create the async `changeBook` method on `Library` with two parameters, id and newInfo.
+- [x]  Pass in id to `ObjectId` and assign it to the `mongoId` variable.
+- [x]  Create a new object that utilizes the `$set` update operator as its key and newInfo as its value. Assign it to the `infoObj` variable. Refer to the [MongoDB documentation](https://www.mongodb.com/docs/manual/reference/operator/update/set/) if needed.
+- [x]  Await `this.collection()` and assign it to a `collection` variable.
+- [x]  Await the result of the `updateOne` method on `collection`. The first argument will set the `_id` key to `mongoId` as its value within an object, the second argument will be `infoObj`.
+- [x]  Console log a message to the user informing them their book was successfully updated.
+- [x]  Await and test the result of this method in `client.js`. The first argument should be the id string of the document you want to change, and the second argument should be an object containing the key you want to change with its new value.
+- [x]  _This method should update the targeted properties on the targeted document._
 
 ## Create The Async `removeBook` Method
 
-- [ ]  Create the async `removeBook` method on `Library` with the parameter id.
-- [ ]  Pass in id to `ObjectId` and assign it to the `mongoId` variable.
-- [ ]  Await `this.collection()` and assign it to a `collection` variable.
-- [ ]  Await the result of the `deleteOne` method on `collection`, passing in as argument an object containing `_id` as a key and `mongoId` as a variable.
-- [ ]  Console log a message to the user informing them their book was successfully removed.
-- [ ]  Await and test the result of this method in `client.js`, passing in the id string of the document you want to remove.
-- [ ]  _This method should remove the targeted document from the collection and database._
+- [x]  Create the async `removeBook` method on `Library` with the parameter id.
+- [x]  Pass in id to `ObjectId` and assign it to the `mongoId` variable.
+- [x]  Await `this.collection()` and assign it to a `collection` variable.
+- [x]  Await the result of the `deleteOne` method on `collection`, passing in as argument an object containing `_id` as a key and `mongoId` as a value.
+- [x]  Console log a message to the user informing them their book was successfully removed.
+- [x]  Await and test the result of this method in `client.js`, passing in the id string of the document you want to remove.
+- [x]  _This method should remove the targeted document from the collection and database._
 
 ## Going Further
 
