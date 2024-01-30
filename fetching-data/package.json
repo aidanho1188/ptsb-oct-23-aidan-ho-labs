@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "fetching-data",
+  "version": "1.0.0",
+  "main": "data-store.js",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
